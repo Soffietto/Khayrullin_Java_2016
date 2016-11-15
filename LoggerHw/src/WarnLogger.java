@@ -2,12 +2,14 @@
  * Created by soffietto on 15.11.16.
  */
 public class WarnLogger extends Logger {
-    public WarnLogger(int priority) {
-        super(priority);
-    }
+
+    Logger next=null;
 
     @Override
-    protected void write(String message) {
-        System.out.println("WARNING: " + message);
+    void writeMessage() {
+        System.out.println("WARN: " + message);
+        if(next != null){
+            next.writeMessage();
+        }
     }
 }

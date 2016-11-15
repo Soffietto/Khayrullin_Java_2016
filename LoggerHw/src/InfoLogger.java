@@ -3,12 +3,13 @@
  */
 public class InfoLogger extends Logger {
 
-    public InfoLogger(int priority) {
-        super(priority);
-    }
+    Logger next=null;
 
     @Override
-    protected void write(String message) {
+    void writeMessage()  {
         System.out.println("INFO: " + message);
+        if(next != null){
+            next.writeMessage();
+        }
     }
 }

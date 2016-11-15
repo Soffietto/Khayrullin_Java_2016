@@ -3,12 +3,13 @@
  */
 public class ErrorLogger extends Logger {
 
-    public ErrorLogger(int priority) {
-        super(priority);
-    }
+    Logger next = new InfoLogger();
 
     @Override
-    protected void write(String message) {
+    void writeMessage() {
         System.out.println("ERROR: " + message);
+        if(next != null){
+            next.writeMessage();
+        }
     }
 }
