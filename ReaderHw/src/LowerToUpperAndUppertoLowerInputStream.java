@@ -5,7 +5,7 @@ import java.io.InputStream;
 /**
  * Created by soffietto on 15.11.16.
  */
-public class MyInputSteam extends FilterInputStream {
+public class LowerToUpperAndUppertoLowerInputStream extends FilterInputStream {
     /**
      * Creates a <code>FilterInputStream</code>
      * by assigning the  argument <code>in</code>
@@ -15,7 +15,7 @@ public class MyInputSteam extends FilterInputStream {
      * @param in the underlying input stream, or <code>null</code> if
      *           this instance is to be created without an underlying stream.
      */
-    protected MyInputSteam(InputStream in) {
+    protected LowerToUpperAndUppertoLowerInputStream(InputStream in) {
         super(in);
     }
 
