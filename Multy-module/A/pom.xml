@@ -17,11 +17,13 @@
         <dependency>
             <groupId>kpfu.itis.khayrullin.multy</groupId>
             <artifactId>B</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <dependency>
             <groupId>kpfu.itis.khayrullin.multy</groupId>
             <artifactId>C</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 
