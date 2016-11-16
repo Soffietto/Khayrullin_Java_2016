@@ -1,8 +1,5 @@
 import java.io.*;
 
-/**
- * Created by soffietto on 15.11.16.
- */
 public class Main {
     public static void main(String[] args) throws IOException {
         File file = new File("src/file.txt");

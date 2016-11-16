@@ -1,8 +1,5 @@
 import java.io.*;
 
-/**
- * Created by soffietto on 15.11.16.
- */
 public class LowerToUpperAndUppertToLowerReader extends FilterReader {
 
     protected LowerToUpperAndUppertToLowerReader(Reader in) {
