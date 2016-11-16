@@ -4,17 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.jetbrainslab.homework.khayrullin</groupId>
+    <groupId>com.jetbrainslab.khayrullin</groupId>
     <artifactId>ay9-homework</artifactId>
     <version>1.0</version>
+    <properties>
+        <java.verion>1.8</java.verion>
+    </properties>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.verion}</source>
+                    <target>${java.verion}</target>
                 </configuration>
             </plugin>
         </plugins>

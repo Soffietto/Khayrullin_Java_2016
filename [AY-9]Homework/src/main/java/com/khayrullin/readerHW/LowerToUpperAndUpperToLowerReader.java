@@ -1,10 +1,10 @@
-package com.khayrullin.ReaderHW;
+package com.khayrullin.readerHW;
 
 import java.io.*;
 
-public class LowerToUpperAndUppertToLowerReader extends FilterReader {
+public class LowerToUpperAndUpperToLowerReader extends FilterReader {
 
-    protected LowerToUpperAndUppertToLowerReader(Reader in) {
+    protected LowerToUpperAndUpperToLowerReader(Reader in) {
         super(in);
     }
 

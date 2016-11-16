@@ -1,4 +1,4 @@
-package com.khayrullin.LoggerHW;
+package com.khayrullin.loggerHW;
 
 public class ErrorLogger extends Logger {
 

@@ -1,4 +1,4 @@
-package com.khayrullin.LoggerHW;
+package com.khayrullin.loggerHW;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Main {
         messages.add(warnMessage);
         messages.add(errorMessage);
         messages.add(invalidMessage);
-        messages.forEach(logger::log);
+        messages.forEach(warnLogger::log);
     }
 
 }
