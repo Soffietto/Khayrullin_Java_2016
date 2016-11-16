@@ -1,4 +1,4 @@
-package com.khayrullin;
+package com.khayrullin.LoggerHW;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
-package com.khayrullin;
+package com.khayrullin.LoggerHW;
 
 public class WarnLogger extends Logger {
 
-    public WarnLogger(){
+    public WarnLogger() {
         this.level = "WARN";
     }
 

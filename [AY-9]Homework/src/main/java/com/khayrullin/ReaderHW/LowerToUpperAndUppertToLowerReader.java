@@ -1,3 +1,5 @@
+package com.khayrullin.ReaderHW;
+
 import java.io.*;
 
 public class LowerToUpperAndUppertToLowerReader extends FilterReader {
@@ -9,9 +11,9 @@ public class LowerToUpperAndUppertToLowerReader extends FilterReader {
     @Override
     public int read() throws IOException {
         int c = super.read();
-        if(c <=90 && c >=65){
+        if (c <= 90 && c >= 65) {
             return Character.toLowerCase(c);
-        }else if(c <=122 && c>=97) {
+        } else if (c <= 122 && c >= 97) {
             return Character.toUpperCase(c);
         }
         return c;

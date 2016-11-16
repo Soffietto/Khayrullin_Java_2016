@@ -1,4 +1,4 @@
-package com.khayrullin;
+package com.khayrullin.LoggerHW;
 
 public abstract class Logger {
 
