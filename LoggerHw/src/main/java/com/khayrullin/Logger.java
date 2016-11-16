@@ -1,3 +1,5 @@
+package com.khayrullin;
+
 public abstract class Logger {
 
     protected String level;

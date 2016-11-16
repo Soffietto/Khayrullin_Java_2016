@@ -1,3 +1,5 @@
+package com.khayrullin;
+
 public class ErrorLogger extends Logger {
 
     public ErrorLogger(){

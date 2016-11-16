@@ -1,3 +1,5 @@
+package com.khayrullin;
+
 public class WarnLogger extends Logger {
 
     public WarnLogger(){

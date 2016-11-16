@@ -1,3 +1,5 @@
+package com.khayrullin;
+
 public class InfoLogger extends Logger {
 
     public InfoLogger(){
