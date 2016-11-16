@@ -1,15 +1,11 @@
-/**
- * Created by soffietto on 15.11.16.
- */
 public class WarnLogger extends Logger {
 
-    Logger next=null;
+    public WarnLogger(){
+        this.level = "WARN";
+    }
 
     @Override
-    void writeMessage() {
+    void writeMessage(String message) {
         System.out.println("WARN: " + message);
-        if(next != null){
-            next.writeMessage();
-        }
     }
 }

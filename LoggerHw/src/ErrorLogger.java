@@ -1,15 +1,11 @@
-/**
- * Created by soffietto on 15.11.16.
- */
 public class ErrorLogger extends Logger {
 
-    Logger next = new InfoLogger();
+    public ErrorLogger(){
+        this.level = "ERROR";
+    }
 
     @Override
-    void writeMessage() {
+    void writeMessage(String message) {
         System.out.println("ERROR: " + message);
-        if(next != null){
-            next.writeMessage();
-        }
     }
 }

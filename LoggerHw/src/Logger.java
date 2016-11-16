@@ -1,11 +1,34 @@
-
-/**
- * Created by soffietto on 15.11.16.
- */
 public abstract class Logger {
 
-    String message = MainLogger.getMessage();
+    protected String level;
+    protected Logger next;
 
-    abstract void writeMessage();
+    public void setNext(Logger next) {
+        this.next = next;
+    }
+
+    public void log(String message) {
+        if (this.level.equals(getLevel(message))) {
+            String[] s = message.split(" : ");
+            String text = s[1];
+            if (next != null) {
+                next.log(message);
+            }
+            writeMessage(text);
+        } else {
+            if (next != null) {
+                next.log(message);
+            }
+        }
+    }
+
+    private String getLevel(String message) {
+        String[] s = message.split(" : ");
+        String pr = s[0];
+        pr = pr.substring(1, pr.length() - 1);
+        return pr;
+    }
+
+    abstract void writeMessage(String message);
 
 }
