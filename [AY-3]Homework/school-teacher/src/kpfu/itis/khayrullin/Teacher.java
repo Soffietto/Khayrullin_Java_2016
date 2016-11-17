@@ -1,15 +1,15 @@
 package kpfu.itis.khayrullin;
 
-import static kpfu.itis.khayrullin.Headteacher.getHeadTeachersName;
+import static kpfu.itis.khayrullin.HeadTeacher.getHeadTeacherName;
 
 public class Teacher {
-    static String name = "Arslanov Marat";
+    static final String NAME = "Arslanov Marat";
 
     public static String getTeachersName() {
-        return name;
+        return NAME;
     }
 
-    public static String getTeachersAndHeadTeachersName() {
-        return getHeadTeachersName() + " and "  +name;
+    public static String getTeacherAndHeadTeacherName() {
+        return getHeadTeacherName() + " and "  + NAME;
     }
 }

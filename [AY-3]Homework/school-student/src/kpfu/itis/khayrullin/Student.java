@@ -1,14 +1,14 @@
 package kpfu.itis.khayrullin;
 
-import static kpfu.itis.khayrullin.Headteacher.getHeadTeachersName;
-import static kpfu.itis.khayrullin.Teacher.getTeachersAndHeadTeachersName;
+import static kpfu.itis.khayrullin.HeadTeacher.getHeadTeacherName;
+import static kpfu.itis.khayrullin.Teacher.getTeacherAndHeadTeacherName;
 import static kpfu.itis.khayrullin.Teacher.getTeachersName;
 
 public class Student {
     public static void main(String[] args) {
-        System.out.println(getHeadTeachersName());
+        System.out.println(getHeadTeacherName());
         System.out.println(getTeachersName());
-        System.out.println(getTeachersAndHeadTeachersName());
+        System.out.println(getTeacherAndHeadTeacherName());
     }
 
 
