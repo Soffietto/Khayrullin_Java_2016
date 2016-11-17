@@ -10,6 +10,4 @@ public class Student {
         System.out.println(getTeachersName());
         System.out.println(getTeacherAndHeadTeacherName());
     }
-
-
 }
