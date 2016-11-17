@@ -1,4 +1,4 @@
-package com.khayrullin.readerHW;
+package com.khayrullin.reader;
 
 import java.io.*;
 

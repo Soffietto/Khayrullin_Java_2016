@@ -1,24 +1,18 @@
-package com.khayrullin.loggerHW;
+package com.khayrullin.logger;
 
-public class InfoLogger extends Logger {
+public class WarnLogger extends Logger {
 
     @Override
     public void log(String message) {
         String[] s = message.split(" : ");
         level = s[0];
-        if (level.equals("[INFO]") || level.equals("[ERROR]")) {
+        if (level.equals("[WARN]")) {
             String text = s[1];
             writeMessage(text);
-
         }
         if (next != null) {
             next.log(message);
         }
 
-    }
-
-    @Override
-    void writeMessage(String message) {
-        System.out.println(message);
     }
 }

@@ -1,4 +1,4 @@
-package com.khayrullin.loggerHW;
+package com.khayrullin.logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,5 +32,4 @@ public class Main {
         //[exception in some modules]
         //[exception in some modules]
     }
-
 }
