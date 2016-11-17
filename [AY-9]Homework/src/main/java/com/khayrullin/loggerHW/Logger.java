@@ -9,20 +9,7 @@ public abstract class Logger {
         this.next = next;
     }
 
-    public void log(String message) {
-        if (this.level.equals(getLevel(message))) {
-            String[] s = message.split(" : ");
-            String text = s[1];
-            if (next != null) {
-                next.log(message);
-            }
-            writeMessage(text);
-        } else {
-            if (next != null) {
-                next.log(message);
-            }
-        }
-    }
+    public abstract void log(String message);
 
     private String getLevel(String message) {
         String[] s = message.split(" : ");

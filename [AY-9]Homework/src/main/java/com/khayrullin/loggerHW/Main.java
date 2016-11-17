@@ -23,7 +23,14 @@ public class Main {
         messages.add(warnMessage);
         messages.add(errorMessage);
         messages.add(invalidMessage);
-        messages.forEach(warnLogger::log);
+
+        messages.forEach(logger::log);
+
+        //Output shoul looks this way:
+        //[some info here]
+        //[warning]
+        //[exception in some modules]
+        //[exception in some modules]
     }
 
 }
