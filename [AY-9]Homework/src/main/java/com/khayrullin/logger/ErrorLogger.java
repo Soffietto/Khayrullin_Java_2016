@@ -2,10 +2,6 @@ package com.khayrullin.logger;
 
 public class ErrorLogger extends Logger {
 
-    public ErrorLogger() {
-        this.level = "ERROR";
-    }
-
     @Override
     public void log(String message) {
         String[] s = message.split(" : ");
