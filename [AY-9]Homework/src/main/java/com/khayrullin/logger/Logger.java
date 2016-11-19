@@ -3,16 +3,21 @@ package com.khayrullin.logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class Logger {
-    protected String regularExpression;
-    protected Logger next;
+abstract class Logger {
 
-    public void setNext(Logger next) {
+    private String level;
+    private Logger next;
+
+    void setLevel(String level) {
+        this.level = level;
+    }
+
+    void setNext(Logger next) {
         this.next = next;
     }
 
-    public void log(String message) {
-        Pattern pattern = Pattern.compile(regularExpression);
+    void log(String message) {
+        Pattern pattern = Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$");
         Matcher matcher = pattern.matcher(message);
         if (matcher.matches()) {
             System.out.println(matcher.group("message"));

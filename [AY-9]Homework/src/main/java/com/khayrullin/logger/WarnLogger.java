@@ -1,8 +1,8 @@
 package com.khayrullin.logger;
 
-public class WarnLogger extends Logger {
+class WarnLogger extends Logger {
 
-    public WarnLogger() {
-        this.regularExpression = "\\[WARN\\] : (?<message>\\[.+\\])$";
+    WarnLogger() {
+        this.setLevel("WARN");
     }
 }
