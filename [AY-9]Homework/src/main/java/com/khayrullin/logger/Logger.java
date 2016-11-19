@@ -7,6 +7,7 @@ abstract class Logger {
 
     private String level;
     private Logger next;
+    private Matcher matcher;
 
     void setLevel(String level) {
         this.level = level;
@@ -17,8 +18,7 @@ abstract class Logger {
     }
 
     void log(String message) {
-        Pattern pattern = Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$");
-        Matcher matcher = pattern.matcher(message);
+        matcher =Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$").matcher(message);
         if (matcher.matches()) {
             System.out.println(matcher.group("message"));
         }

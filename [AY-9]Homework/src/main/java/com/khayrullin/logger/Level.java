@@ -1,5 +1,8 @@
 package com.khayrullin.logger;
 
-enum Level {
-    ERROR, WARN, INFO
+interface Level {
+    final String ERROR = "ERROR";
+    final String WARN = "WARN";
+    final String INFO = "INFO";
+
 }
