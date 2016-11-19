@@ -1,8 +1,8 @@
 package com.khayrullin.logger;
 
-public class ErrorLogger extends Logger {
+class ErrorLogger extends Logger {
 
-    public ErrorLogger() {
+    ErrorLogger() {
         this.setLevel("ERROR");
     }
 }
