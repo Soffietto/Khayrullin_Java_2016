@@ -5,10 +5,10 @@ import java.util.regex.Pattern;
 
 abstract class Logger {
 
-    private Level level;
+    private String level;
     private Logger next;
 
-    void setLevel(Level level) {
+    void setLevel(String level) {
         this.level = level;
     }
 
