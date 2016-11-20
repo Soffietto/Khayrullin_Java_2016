@@ -5,12 +5,12 @@ import java.util.regex.Pattern;
 
 abstract class Logger {
 
-    private String level;
     private Logger next;
     private Matcher matcher;
+    private Pattern pattern;
 
     void setLevel(String level) {
-        this.level = level;
+        this.pattern = Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$");
     }
 
     void setNext(Logger next) {
@@ -18,7 +18,7 @@ abstract class Logger {
     }
 
     void log(String message) {
-        matcher =Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$").matcher(message);
+        matcher = pattern.matcher(message);
         if (matcher.matches()) {
             System.out.println(matcher.group("message"));
         }
