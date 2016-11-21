@@ -10,7 +10,7 @@ abstract class Logger {
     private Pattern pattern;
 
     void setLevelPattern(String level) {
-        this.pattern = Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$");
+        pattern = Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$");
     }
 
     void setNext(Logger next) {
