@@ -9,7 +9,7 @@ abstract class Logger {
     private Matcher matcher;
     private Pattern pattern;
 
-    void setLevel(String level) {
+    void setLevelPattern(String level) {
         this.pattern = Pattern.compile("\\[(" + level + ")\\] : (?<message>\\[.+\\])$");
     }
 
