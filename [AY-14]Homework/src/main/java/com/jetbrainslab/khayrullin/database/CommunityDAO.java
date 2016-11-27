@@ -5,12 +5,13 @@ import com.jetbrainslab.khayrullin.entity.Community;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static com.jetbrainslab.khayrullin.database.DBConnection.conn;
+import static com.jetbrainslab.khayrullin.database.Connection.conn;
 
 public class CommunityDAO {
+    private final String EDIT ="UPDATE community SET name=?, description=?, founder_id=?, created_at=? WHERE id=";
 
     public boolean editCommunity(Community community, int id) throws SQLException {
-        PreparedStatement stmt = conn.prepareStatement("UPDATE community SET name=?, description=?, founder_id=?, created_at=? WHERE id=" + id);
+        PreparedStatement stmt = conn.prepareStatement(EDIT + id);
         stmt.setString(1, community.getName());
         stmt.setString(2, community.getDescription());
         stmt.setInt(3, community.getFounderID());

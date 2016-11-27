@@ -5,9 +5,9 @@ import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
-public abstract class DBConnection {
+public abstract class Connection {
 
-    static Connection conn;
+    static java.sql.Connection conn;
 
     static {
         final String DRIVER = "org.postgresql.Driver";
@@ -16,7 +16,7 @@ public abstract class DBConnection {
         String password = null;
 
         // read db pruseoperties
-        try (InputStream in = DBConnection.class
+        try (InputStream in = Connection.class
                 .getClassLoader().getResourceAsStream("database.properties")) {
             Properties properties = new Properties();
             properties.load(in);

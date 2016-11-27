@@ -5,12 +5,13 @@ import com.jetbrainslab.khayrullin.entity.Request;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static com.jetbrainslab.khayrullin.database.DBConnection.conn;
+import static com.jetbrainslab.khayrullin.database.Connection.conn;
 
 public class RequestDAO {
+    private final String ADD = "INSERT INTO request(needy_id, volunteer_id, address, latitude, longitude, created_at, service_type, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     public boolean addRequest(Request request) throws SQLException {
-        PreparedStatement stmt = conn.prepareStatement("INSERT INTO request(needy_id, volunteer_id, address, latitude, longitude, created_at, service_type, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        PreparedStatement stmt = conn.prepareStatement(ADD);
         stmt.setInt(1, request.getNeedyId());
         stmt.setInt(2, request.getVolonteerId());
         stmt.setString(3, request.getAddress());

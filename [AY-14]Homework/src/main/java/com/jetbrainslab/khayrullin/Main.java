@@ -12,22 +12,21 @@ public class Main {
     public static void main(String[] args) throws SQLException {
         Scanner in = new Scanner(System.in);
 
-        UserDAO userDAO = null;
-        NewsDAO newsDAO = null;
-        CommunityDAO communityDAO = null;
-        MessageDAO messageDAO = null;
-        RequestDAO requestDAO = null;
+        UserDAO userDAO;
+        NewsDAO newsDAO;
+        CommunityDAO communityDAO;
+        MessageDAO messageDAO;
+        RequestDAO requestDAO;
 
-        User user=null;
-        Message message=null;
-        Request request=null;
-        Community community = null;
-        News news=null;
+        User user;
+        Message message;
+        Request request;
+        Community community;
+        News news;
 
         boolean checker = true;
-        String option = null;
-        int report = 0;
-
+        String option;
+        int report;
         while (checker){
             option = null;
             System.out.println("Выберете опцию " );
@@ -157,14 +156,14 @@ public class Main {
                             userDAO = new UserDAO();
                             System.out.println("Введите нужный сезон[SUMMER, WINTER, SPRING, AUTUMN]");
                             in.nextLine();
-                            userDAO.usersWithMostMessagesOnSeason(in.nextLine());
+                            userDAO.getUsersWithMostMessagesOnSeason(in.nextLine());
                             userDAO = null;
                             break;
                         case 3:
                             userDAO = new UserDAO();
                             System.out.println("Введите нужный набор символов: ");
                             in.nextLine();
-                            userDAO.usersWithMostAnswersWithAddressPart(in.nextLine());
+                            userDAO.getUsersWithMostAnswersByAddressPart(in.nextLine());
                             userDAO = null;
                             break;
                         default:
