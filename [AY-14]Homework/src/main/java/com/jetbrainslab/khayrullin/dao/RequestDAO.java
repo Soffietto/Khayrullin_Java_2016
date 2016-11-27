@@ -1,11 +1,11 @@
-package com.jetbrainslab.khayrullin.database;
+package com.jetbrainslab.khayrullin.dao;
 
 import com.jetbrainslab.khayrullin.entity.Request;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static com.jetbrainslab.khayrullin.database.Connection.conn;
+import static com.jetbrainslab.khayrullin.dao.Connection.conn;
 
 public class RequestDAO {
     private final String ADD = "INSERT INTO request(needy_id, volunteer_id, address, latitude, longitude, created_at, service_type, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";

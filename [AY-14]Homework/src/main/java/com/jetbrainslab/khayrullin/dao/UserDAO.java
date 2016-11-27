@@ -1,12 +1,14 @@
-package com.jetbrainslab.khayrullin.database;
+package com.jetbrainslab.khayrullin.dao;
 
 import com.jetbrainslab.khayrullin.entity.User;
+import com.jetbrainslab.khayrullin.enums.Season;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static com.jetbrainslab.khayrullin.database.Connection.conn;
+import static com.jetbrainslab.khayrullin.dao.Connection.conn;
+import static com.jetbrainslab.khayrullin.enums.Season.SUMMER;
 
 public class UserDAO {
     private final String ADD = "INSERT INTO users(name, surname, email, password, role, status) VALUES (?, ?, ?, ?, ?, ?)";
@@ -52,24 +54,25 @@ public class UserDAO {
         return true;
     }
 
-    public void getUsersWithMostMessagesOnSeason(String season) throws SQLException {
+    public void getUsersWithMostMessagesOnSeason(String stringSeason) throws SQLException {
         int from = 0;
         int to = 0;
         int december = 13;
+        Season season = Season.valueOf(stringSeason);
         switch (season) {
-            case "SUMMER":
+            case SUMMER:
                 from = 6;
                 to = 8;
                 break;
-            case "AUTUMN":
+            case AUTUMN:
                 from = 9;
                 to = 11;
                 break;
-            case "SPRING":
+            case SPRING:
                 from = 3;
                 to = 5;
                 break;
-            case "WINTER":
+            case WINTER:
                 from = 1;
                 to = 2;
                 december = 12;

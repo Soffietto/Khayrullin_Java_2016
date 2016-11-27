@@ -1,4 +1,4 @@
-package com.jetbrainslab.khayrullin.database;
+package com.jetbrainslab.khayrullin.dao;
 
 import java.io.IOException;
 import java.io.InputStream;

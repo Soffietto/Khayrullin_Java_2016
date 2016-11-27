@@ -1,11 +1,11 @@
-package com.jetbrainslab.khayrullin.database;
+package com.jetbrainslab.khayrullin.dao;
 
 import com.jetbrainslab.khayrullin.entity.Community;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static com.jetbrainslab.khayrullin.database.Connection.conn;
+import static com.jetbrainslab.khayrullin.dao.Connection.conn;
 
 public class CommunityDAO {
     private final String EDIT ="UPDATE community SET name=?, description=?, founder_id=?, created_at=? WHERE id=";

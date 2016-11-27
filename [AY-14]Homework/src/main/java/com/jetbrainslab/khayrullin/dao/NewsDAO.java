@@ -1,4 +1,4 @@
-package com.jetbrainslab.khayrullin.database;
+package com.jetbrainslab.khayrullin.dao;
 
 import com.jetbrainslab.khayrullin.entity.News;
 
@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static com.jetbrainslab.khayrullin.database.Connection.conn;
+import static com.jetbrainslab.khayrullin.dao.Connection.conn;
 
 public class NewsDAO {
     private final String EDIT = "UPDATE news SET text=?, community_id=?, author_id=?, created_at=? WHERE id=";

@@ -1,11 +1,11 @@
-package com.jetbrainslab.khayrullin.database;
+package com.jetbrainslab.khayrullin.dao;
 
 import com.jetbrainslab.khayrullin.entity.Message;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import static com.jetbrainslab.khayrullin.database.Connection.conn;
+import static com.jetbrainslab.khayrullin.dao.Connection.conn;
 
 public class MessageDAO {
     private final String ADD = "INSERT INTO message(text, sender_id, recipient_id, created_at, status) VALUES (?, ?, ?, ?, ?)";
