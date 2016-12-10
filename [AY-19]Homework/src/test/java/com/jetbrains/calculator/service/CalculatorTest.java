@@ -7,6 +7,7 @@ import org.junit.Test;
 public class CalculatorTest {
     private static final double N_1 = 18.3d;
     private static final double N_2 = 4.8d;
+    private static final double ZERO = 0;
     private static Calculator calculator;
     private static final double DELTA = 10e-2;
 
@@ -33,5 +34,10 @@ public class CalculatorTest {
     @Test
     public void divShouldReturnCorrectDiv() {
         Assert.assertEquals(N_1 / N_2, calculator.div(N_1, N_2), DELTA);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void divShouldReturnAriphmeticException(){
+        calculator.div(N_1, ZERO);
     }
 }
